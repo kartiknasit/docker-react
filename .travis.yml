@@ -6,4 +6,4 @@ before_install:
     - docker build -t kartiknasit/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run kartiknasit/docker-react npm run test -- --coverage
+    - docker run -e CI=true kartiknasit/docker-react npm run test -- --coverage
