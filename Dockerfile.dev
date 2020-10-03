@@ -11,6 +11,6 @@ RUN npm install
 # But we can keep as it is
 COPY . .
 
-EXPOSE 3000
+#EXPOSE 3000
 
 CMD ["npm", "run", "start"]
