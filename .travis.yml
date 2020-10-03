@@ -7,3 +7,11 @@ before_install:
 
 script:
     - docker run -e CI=true kartiknasit/docker-react npm run test -- --coverage
+
+deploy:
+    provider: elasticbeanstalk
+    region: "us-east-1"
+    app: "docker-react"
+    evn: "dockerreact-env"
+    bucket_name: "elasticbeanstalk-us-east-1-791283579913"
+    bucket_path: "docker-react"
